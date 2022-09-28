@@ -9,7 +9,7 @@ function Home() {
   console.log(state);
 
   useEffect(() => {
-    if (!state || !state?.loggedIn) {
+    if (!state?.loggedIn) {
       navigate("/login", { replace: true });
     }
   }, []);
@@ -25,7 +25,7 @@ function Home() {
       </Button>
       <div className="toast">
         <Frame>
-          {state.loggedIn && showToast && (
+          {state?.loggedIn && showToast && (
             <Toast
               content="Login Success"
               duration={3000}
