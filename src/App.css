@@ -1,0 +1,13 @@
+.toast {
+  position: fixed;
+  bottom: 0;
+}
+.spinner {
+  background-color: #0000002a;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
