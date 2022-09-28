@@ -9,7 +9,7 @@ function Home() {
   console.log(state);
 
   useEffect(() => {
-    if (!state?.loggedIn) {
+    if (!state || !state?.loggedIn) {
       navigate("/login", { replace: true });
     }
   }, []);
