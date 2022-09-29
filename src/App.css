@@ -11,3 +11,12 @@
   justify-content: center;
   z-index: 1;
 }
+.login-form {
+  width: 70%;
+  margin-inline: auto;
+}
+.login-form h1 {
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+}

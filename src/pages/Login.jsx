@@ -7,6 +7,7 @@ import {
   Frame,
   Spinner,
   TextField,
+  TextStyle,
   Toast,
 } from "@shopify/polaris";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -76,28 +77,31 @@ function Login() {
           <Spinner accessibilityLabel="Loading" size="large" />;
         </div>
       )}
-      <Card sectioned>
-        <Form preventDefault={true} onSubmit={handleSubmit}>
-          <FormLayout>
-            <TextField
-              value={username}
-              onChange={(val) => setUsername(val)}
-              label="Username"
-              type="text"
-            />
-            <TextField
-              value={password}
-              onChange={(val) => setPassword(val)}
-              label="Password"
-              type="password"
-            />
+      <div className="login-form">
+        <h1>Login</h1>
+        <Card sectioned>
+          <Form preventDefault={true} onSubmit={handleSubmit}>
+            <FormLayout>
+              <TextField
+                value={username}
+                onChange={(val) => setUsername(val)}
+                label="Username"
+                type="text"
+              />
+              <TextField
+                value={password}
+                onChange={(val) => setPassword(val)}
+                label="Password"
+                type="password"
+              />
 
-            <Button primary submit>
-              Submit
-            </Button>
-          </FormLayout>
-        </Form>
-      </Card>
+              <Button primary submit>
+                Submit
+              </Button>
+            </FormLayout>
+          </Form>
+        </Card>
+      </div>
       {error && (
         <div className="toast">
           <Frame>
